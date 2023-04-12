@@ -1,4 +1,19 @@
 import requests
+import os
+from dotenv import load_dotenv
+
+# Load the .env file
+load_dotenv()
+
+# Get the ChatGPT API key from the environment variable
+chatgpt_api_key = os.environ.get("CHATGPT_API_KEY")
+
+if chatgpt_api_key:
+    print("API key loaded successfully.")
+else:
+    print("Failed to load API key. Make sure the .env file is properly configured.")
+
+
 
 def get_user_prompt():
     prompt = input("Please enter a prompt: ")
