@@ -1,5 +1,6 @@
 import requests
 import os
+import openai
 from dotenv import load_dotenv
 
 # Load the .env file
@@ -10,13 +11,19 @@ chatgpt_api_key = os.environ.get("CHATGPT_API_KEY")
 
 if chatgpt_api_key:
     print("API key loaded successfully.")
+    openai.api_key = chatgpt_api_key
 else:
     print("Failed to load API key. Make sure the .env file is properly configured.")
 
 
 
+def get_language():
+
+
+
+
 def get_user_prompt():
-    prompt = input("Please enter a prompt: ")
+    prompt = input("Define your first test case: ")
     return prompt
 
 def send_prompt_to_api(prompt):
