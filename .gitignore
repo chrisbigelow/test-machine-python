@@ -1,2 +1,2 @@
 .env
-./example-chatbot/config.py
+/example-chatbot/config.py
